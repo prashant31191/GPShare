@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/worldmap"
+    android:gravity="center_horizontal" >
+
+    <ImageView
+        android:id="@+id/ivBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/gpshare_banner_v1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ivBanner"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_page_button_selector"
+            android:text="TRACK NOW"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/Button03"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_below="@+id/button1"
+            android:background="@drawable/main_page_button_selector"
+            android:text="HISTORY"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/Button01"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Button03"
+            android:layout_below="@+id/Button03"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_page_button_selector"
+            android:text="FRIENDS"
+            android:textColor="@color/White" />
+
+        <Button
+            android:id="@+id/Button04"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Button01"
+            android:layout_below="@+id/Button01"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_page_button_selector"
+            android:text="GALLERY"
+            android:textColor="@color/White" />
+    </RelativeLayout>
+
+</RelativeLayout>

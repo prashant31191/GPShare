@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devtechdesign.gpshare"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/globe_logo2"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.devtechdesign.gpshare.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.devtechdesign.gpshare.map.MapFragAct" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="4132500" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDCY4LIzvawyvuBykSbYZsbxY5AwKpJjd8" />
+
+        <activity
+            android:name="com.devtechdesign.gpshare.Images.CustomCameraAct"
+            android:label="@string/title_activity_test"
+            android:parentActivityName="com.devtechdesign.gpshare.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtechdesign.gpshare.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.devtechdesign.gpshare.Settings"
+            android:label="@string/title_activity_test"
+            android:parentActivityName="com.devtechdesign.gpshare.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtechdesign.gpshare.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.devtechdesign.gpshare.map.LargeGalleryMapPic"
+            android:label="@string/title_activity_test"
+            android:parentActivityName="com.devtechdesign.gpshare.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.devtechdesign.gpshare.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.devtechdesign.gpshare.Images.CameraActForResult"
+            android:label="@string/title_activity_camera_act_for_result" >
+        </activity>
+
+        <service android:name="com.devtechdesign.gpshare.services.GPXService" >
+        </service>
+    </application>
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+
+    <permission
+        android:name="com.rad.routetracking.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.rad.routetracking.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

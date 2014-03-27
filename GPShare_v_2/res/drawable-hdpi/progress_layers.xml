@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <rotate
+            android:drawable="@drawable/orange_progress_bar_inner_filler"
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="1080" />
+    </item>
+    <item>
+        <rotate
+            android:drawable="@drawable/orange_progress_bar_filler"
+            android:fromDegrees="720"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="0" />
+    </item>
+
+</layer-list>

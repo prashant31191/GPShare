@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/GPShare.Theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/txtTrip"
+        style="@style/JournalEditTexts"
+        android:layout_weight="0"
+        android:hint="Trip Name" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtPlace"
+        style="@style/JournalEditTexts"
+        android:layout_weight="0"
+        android:hint="@string/place" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtActivity"
+        style="@style/JournalEditTexts"
+        android:layout_weight="0"
+        android:hint="Acivity" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:text="test"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Green"
+        android:textSize="15sp"
+        android:textStyle="bold|italic" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="5dip"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <EditText
+            android:id="@+id/txtJournalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_rounded_corners"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black" >
+
+            <requestFocus />
+        </EditText>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="2.5dip"
+            android:layout_weight=".2"
+            android:background="@drawable/black_oval_buttons"
+            android:text="@string/cancel" >
+        </Button>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="2.5dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight=".2"
+            android:background="@drawable/black_oval_buttons"
+            android:text="@string/save" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

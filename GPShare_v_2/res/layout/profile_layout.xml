@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lytProfilePicName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/lytOne"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="1dp"
+            android:background="@color/Gray"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_margin="5dip"
+                android:gravity="left" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imgProfile"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="20dip" />
+
+            <ImageButton
+                android:id="@+id/imgBtnMinimizeProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/orange_round_nav_arrow" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lytProfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Gray"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/lytTwo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytOne"
+                android:background="@color/Gray"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" 
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                    <TextView
+                        android:id="@+id/txtTotalRoutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dip" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Tracks"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="11dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content" 
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="test2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                    <TextView
+                        android:id="@+id/txtTotalDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dip" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Distance"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="11dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" 
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="test2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                    <TextView
+                        android:id="@+id/txtUploadedImages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dip" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar4"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uploaded Pics"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="11dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytThree"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytTwo"
+                android:layout_marginTop="1dip"
+                android:background="@color/Gray"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" 
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                    <TextView
+                        android:id="@+id/txtTotalPlaces"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dip" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Places"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="11dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" 
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+
+                    <TextView
+                        android:id="@+id/txtTotalFriends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dip" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar5"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Friends"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="11dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytFour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:background="#000" />
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dip"
+                        android:background="#696969" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dip"
+                        android:background="#000" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

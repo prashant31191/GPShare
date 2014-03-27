@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+		 	<Button android:text="Select Place" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		 		 	android:id="@+id/btnPlaces" android:layout_alignParentRight="true" android:layout_alignParentLeft="true"></Button>
+		 		 
+		 	<Button android:text="Create Place" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				 	android:id="@+id/btnCreatePlace" android:layout_below="@+id/btnPlaces" android:layout_alignParentRight="true" android:layout_alignParentLeft="true"></Button>
+    -->
+
+    <TextView
+        android:id="@+id/txtPlaceAssign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Assign Route To a Place"
+        android:textSize="35px" >
+    </TextView>
+
+    <!--
+          <Button android:layout_height="wrap_content" android:text="Sync Databases" android:onClick="startOnlineDataRetrievalProcess" 
+		  android:id="@+id/btnSyncDatabases" android:layout_width="wrap_content" android:layout_below="@+id/btnAddToExistingPlace" 
+		  android:layout_alignParentLeft="true" android:layout_alignParentRight="true"></Button>
+    -->
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Next" />
+
+    <TextView
+        android:id="@+id/txtCreateNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:text="Place Name"
+        android:textSize="25px" />
+
+    <EditText
+        android:id="@+id/txtPlaceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type Place Name" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:text="Route Name" />
+
+    <EditText
+        android:id="@+id/txtRouteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" >
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/lytPlaceList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/orText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="OR select existing place" >
+        </TextView>
+
+        <ListView
+            android:id="@+id/lvPlaceList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp" >
+        </ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnQuestion"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/txtPlaceAssign"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/question_mark_button"
+        android:textColor="#ffffffff" >
+    </Button>
+
+</LinearLayout>

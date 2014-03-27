@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/imgGalleryViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="270dp"
+        android:layout_marginBottom="5dip" />
+    <!--
+          <ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="fill_parent"
+        android:layout_height="270dp" />
+    -->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/mygallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+    <!--
+          <Button
+        android:id="@+id/btnLocate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="locate"
+        android:text="Locate on Map" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.google.android.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:apiKey="@string/prodMapKey"
+            android:clickable="true"
+            android:state_enabled="true" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnPlaces"
+            android:layout_margin="2dip"
+            android:background="@drawable/share_icon"
+            android:onClick="btnShare"
+            android:visibility="visible" >
+        </Button>
+
+        <!--
+           <Button
+            android:id="@+id/btnMapGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnShare"
+            android:layout_margin="2dip"
+            android:background="@drawable/ic_map_gallery"
+            android:onClick="goToMapGallery"
+            android:visibility="visible" >
+        </Button>
+        -->
+
+        <Button
+            android:id="@+id/btnLocationRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/geocam_icon_target_relocate"
+            android:onClick="btnLocationRefresh" >
+        </Button>
+
+        <Button
+            android:id="@+id/btnZoomIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnLocationRefresh"
+            android:background="@drawable/geocamzoomin"
+            android:onClick="zoomIn" >
+        </Button>
+
+        <Button
+            android:id="@+id/btnZoomOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnZoomIn"
+            android:background="@drawable/geocamzoomout"
+            android:onClick="zoomOut" >
+        </Button>
+
+        <TextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnShare"
+            android:layout_alignBottom="@+id/btnShare"
+            android:layout_toLeftOf="@+id/btnZoomIn"
+            android:layout_toRightOf="@+id/btnShare"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <!--
+    <com.devtechdesign.gpshare.layouts.GpshareSlidingPaneLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <fragment
+            android:id="@+id/paneLeftMenu"
+            android:name="com.devtechdesign.gpshare.LeftMenuSliderFragment"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" />
+
+        <fragment
+            android:id="@+id/content_frame"
+            android:name="com.devtechdesign.gpshare.layouts.FrgTrackingStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right" />
+    </com.devtechdesign.gpshare.layouts.GpshareSlidingPaneLayout>
+    -->
+
+</LinearLayout>

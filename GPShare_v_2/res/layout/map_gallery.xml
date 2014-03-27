@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.google.android.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:apiKey="@string/prodMapKey"
+        android:clickable="true"
+        android:state_enabled="true" />
+ 
+    <Button
+        android:id="@+id/btnZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnLocationRefresh"
+        android:onClick="zoomIn"
+        android:background="@drawable/geocamzoomin" >
+    </Button>
+
+    <Button
+        android:id="@+id/btnZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnZoomIn"
+        android:onClick="zoomOut"
+        android:background="@drawable/geocamzoomout" >
+    </Button>
+
+    <Button
+        android:id="@+id/btnMapToggle"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnZoomOut"
+        android:layout_marginRight="11dip"
+        android:background="@drawable/main_map_button_selector"
+        android:onClick="toggleMap" >
+    </Button>
+
+</RelativeLayout>

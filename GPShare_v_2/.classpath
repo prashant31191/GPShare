@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="C:/android/sdk/add-ons/addon-google_apis-google-19/libs/maps.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/android/sdk/add-ons/addon-google_apis-google-19/docs/reference"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/workspace/GPShare_Old/libs/libGoogleAnalytics.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/workspace/GPShare_Old/libs/gcm.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/workspace/GPShare_Old/libs/achartengine-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/android/sdk/platforms/android-19/android.jar" sourcepath="C:/android/sdk/sources/android-19">
+		<attributes>
+			<attribute name="javadoc_location" value="http://developer.android.com/reference/"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/android/sdk/platforms/android-17/android.jar" sourcepath="C:/android/sdk/platforms/android-19/android.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://developer.android.com/reference/"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/android/sdk/platforms/android-16/android.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://developer.android.com/reference/"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/android/sdk/platforms/android-10/android.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://developer.android.com/reference/"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/android/sdk/platforms/android-8/android.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://developer.android.com/reference/"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="lib" path="libs/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/android/sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs/google-play-services.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/android/sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs/../../../docs/reference/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/workspace/GPShareLibs/libs/ksoap2-android-assembly-2.5.7-jar-with-dependencies.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

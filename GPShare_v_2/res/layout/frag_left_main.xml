@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_main_menu_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/track"
+        android:textColor="@color/White" />
+  
+    <Button
+        android:id="@+id/btnTrips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/trips"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/btnImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/images"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/btnMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/map"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/btnJournals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/journals"
+        android:textColor="@color/White" />
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_left_main_menu_button"
+        android:text="@string/action_settings"
+        android:textColor="@color/White" />
+
+</LinearLayout>

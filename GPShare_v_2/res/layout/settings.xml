@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/txtInternet"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/txtPublicRank"
+        android:layout_margin="20dp"
+        android:layout_weight="0.79"
+        android:text="Enable/Disable Internet (Suggested for International and Remote Travel) " >
+    </TextView>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Done" >
+    </Button>
+
+    <Button
+        android:id="@+id/btnChangeProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtInternet"
+        android:layout_marginTop="18dp"
+        android:text="Change Profile Pic" >
+    </Button>
+
+    <TextView
+        android:id="@+id/txtPublicRank"
+        android:layout_width="187dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnChangeProfilePic"
+        android:layout_margin="20dp"
+        android:layout_weight="0.79"
+        android:text="Click to enable/disable Rank viewable to public" >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cbPublicRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtPublicRank"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/txtPublicRank"
+        android:onClick="updatePublicProfileBool" />
+
+    <CheckBox
+        android:id="@+id/cbInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtInternet"
+        android:layout_alignLeft="@+id/cbPublicRank"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/btnSyncOnlineData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtPublicRank"
+        android:onClick="syncWithOnlineData"
+        android:text="Sync with Online Data" />
+
+    <Button
+        android:id="@+id/btnDbViewer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnSyncOnlineData"
+        android:onClick="btnDbViewer"
+        android:text="DBViewer" />
+
+    <Button
+        android:id="@+id/btnUom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnDbViewer"
+        android:onClick="btnUomClick"
+        android:text="Units of Measure" />
+
+</RelativeLayout>

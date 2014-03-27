@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+       <!--  <item name="android:windowNoTitle">true</item> -->
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="GPShare.Theme" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/Orange</item>
+    </style>
+
+    <style name="EarthGallery" parent="android:Theme">
+        <item name="android:background">@drawable/background</item>
+    </style>
+
+    <style name="Theme" parent="android:Theme">
+        <item name="android:background">@null</item>
+      <!--   <item name="android:windowNoTitle">true</item> -->
+    </style>
+
+    <style name="button_settings">
+        <item name="android:src">@drawable/btn_settings_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="cb_img_select">
+        <item name="android:button">@drawable/cbshare</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dip</item>
+        <item name="android:layout_marginTop">10dip</item>
+    </style>
+
+    <style name="button_gallery">
+        <item name="android:background">@drawable/button_gallery_selector</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:text">Camera</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="button_lytCreateRouteCancel">
+        <item name="android:background">@drawable/button_gallery_selector</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:text">Cancel</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="button_lytCreateRouteSave">
+        <item name="android:background">@drawable/button_gallery_selector</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:text">Save</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="button_lytCreateRouteUndo">
+        <item name="android:background">@drawable/button_gallery_selector</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:text">undo</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="text_title">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="text_option">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="layout_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_fill">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="layout_f_w">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="h_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.5dip</item>
+    </style>
+
+    <style name="indicator_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">4dip</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="JournalEditLbl">
+        <item name="android:layout_width">70dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dip</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="JournalChildLayouts">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">1dip</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="JournalEditTexts">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_margin">1dip</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/LightGrey</item>
+    </style>
+
+</resources>
