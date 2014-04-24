@@ -12,8 +12,8 @@ public final class GPShareDatabase {
 		}
 
 		public static final String ACTIVITY_TABLE_NAME = "activity_table_name";
-		public static final String ACTIVITY_ACITVITYID = "acitvityid";
-		public static final String ACTIVITY_ACIVITYNAME = "acivityname";
+		public static final String ACTIVITY_ACITVITYID = "activityid";
+		public static final String ACTIVITY_ACIVITYNAME = "activityname";
 		public static final String ACTIVITY_CREATEDATE = "createdate";
 		public static final String ACTIVITY_UPDATEDATE = "updatedate";
 		public static final String ACTIVITY_DIRTY = "dirty";

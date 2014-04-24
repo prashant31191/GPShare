@@ -1,16 +1,13 @@
 package com.devtechdesign.gpshare;
 
 import java.lang.Thread.UncaughtExceptionHandler;
-import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 import android.util.Log;
 import com.devtechdesign.gpshare.LeftMenuSliderFragment.BtnJournalsSelectedListener;
 import com.devtechdesign.gpshare.Images.CameraActForResult;
 import com.devtechdesign.gpshare.Images.CustomCameraAct;
 import com.devtechdesign.gpshare.data.db.DatabaseControl;
-import com.devtechdesign.gpshare.data.db.RouteDataBaseHelper;
 import com.devtechdesign.gpshare.data.db.Transactions;
-import com.devtechdesign.gpshare.dialogs.DialogNoJournalsExist;
 import com.devtechdesign.gpshare.facebook.SessionStore;
 import com.devtechdesign.gpshare.journals.JournalsManager;
 import com.devtechdesign.gpshare.journals.JournalsManager.IJournalAction;
@@ -44,26 +41,17 @@ import com.facebook.android.AsyncFacebookRunner;
 import com.facebook.android.Facebook;
 import com.getpebble.android.kit.Constants;
 import com.getpebble.android.kit.PebbleKit;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.GoogleMapOptions;
-import com.google.android.gms.maps.GoogleMap.CancelableCallback;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-
 import dev.tech.auth.DTDLogin;
 import dev.tech.gpsharelibs.DTD;
 import dev.tech.gpsharelibs.IDevTech;
 import dev.tech.util.GLibTrans;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
-import android.app.ActionBar.Tab;
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -78,20 +66,16 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SlidingPaneLayout;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -120,8 +104,7 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 	public String currentSpeed, currentAltitude, currentCoordCount, currentPlace;
 	public int tagCount = 0;
 	public String notificationCount = "0";
-	public static TextView txtLayoutStatus, txtName;
-	private static Button btnLayoutStatusLeft, btnLayoutStatusRight;
+	public static TextView txtLayoutStatus, txtName; 
 	private static Handler handler = new Handler();
 	private Thread gpxThread, profileThread;
 	private ProgressDialog gpxDialog;
@@ -214,18 +197,6 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 			// temporarily setting person ID for testing
 			DTD.setPersonId("192");
 		}
- 
-		// sliderPane.setPanelSlideListener(new PaneListener());
-		// lytJournalSaveLoc = (LinearLayout)
-		// mapFrag.getView().findViewById(R.id.lytJournalSaveLoc);
-		// btnSaveJournalLoc = (Button)
-		// lytJournalSaveLoc.findViewById(R.id.btnSaveJournalLoc);
-		// btnSaveJournalLoc.setOnClickListener(saveButtonClickListener);
-
-		// mMap.getUiSettings().setScrollGesturesEnabled(true);
-		// options.mapType(GoogleMap.MAP_TYPE_SATELLITE).rotateGesturesEnabled(true).tiltGesturesEnabled(true).compassEnabled(true).scrollGesturesEnabled(true);
-		// mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-		// pane.setPanelSlideListener(new PaneListener());
 
 		GPContextHolder.setMainAct(this);
 
@@ -275,11 +246,12 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 
 			// if the service isn't already running then start it because it
 			// crashed, if the currentRouteDateKey isn't blank and
-
+			trackingOnBool = true;
 			if (!isGpsServiceRunning(getApplicationContext()))
 				startOrContinueGpxService(gprefs.LoadPreferences("currentRouteDateKey"));
+
 		}
-		setCurrentFragTracking(); 
+		setCurrentFragTracking();
 		this.setFragment(Globals.getCurrentFrag());
 		// startSyncService();
 	}
@@ -563,7 +535,7 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 	public void stopGpsService() {
 		Intent intent = new Intent(GPXService.ACTION_FOREGROUND);
 		intent.setClass(getApplicationContext(), GPXService.class);
-		stopService(intent); 
+		stopService(intent);
 		Intent gpsService = new Intent(getApplicationContext(), GPXService.class);
 		stopService(gpsService);
 	}
@@ -576,9 +548,9 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 		intent.putExtra("normalTracking", trackingOnBool);
 		intent.putExtra("realTimeTracking", realTimeTrackingBool);
 		intent.putExtra("pebbleTracking", pebbleTracking);
-		intent.putExtra("realTimeInterval", 10000); 
+		intent.putExtra("realTimeInterval", 10000);
 		startService(intent);
-		
+
 		Intent service = new Intent(getApplicationContext(), GPXService.class);
 		startService(service);
 	}
@@ -589,7 +561,7 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 		boolean disableEvent = false;
 
 		// back button key down
-		if (keyCode == KeyEvent.KEYCODE_BACK) { 
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			finish();
 		}
 		return disableEvent;
@@ -650,8 +622,8 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 				Transactions.updateCurrentRouteRecord(localRouteKey, "false");
 
 				frgTrackingStats.abortBroadCast();
-				frgTrackingStats.setTrackingBool(false); 
-				
+				frgTrackingStats.setTrackingBool(false);
+
 				gprefs.savePreferences("currentRouteDateKey", "");
 				gprefs.savePreferences("currentRouteName", "");
 				gprefs.savePreferences("currentPlace", "");
@@ -723,7 +695,7 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 	public boolean isGpsServiceRunning(Context context) {
 		ActivityManager manager = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
 		for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-			if ("com.rad.gpsservice.GPXService".equals(service.service.getClassName())) {
+			if ("com.devtechdesign.gpshare.services.GPXService".equals(service.service.getClassName())) {
 				return true;
 			}
 		}
@@ -744,17 +716,16 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 
 			Transactions.createNewRoute("", gprefs.LoadPreferences("currentPlace"), "false", "", "", currentRouteDateKey, "true", currentRouteSegmentDateKey, "");
 			GoogleA.recordClick("StartButton." + DTD.getPersonId());
- 
+
 			trackingOnBool = true;
 
 			startOrContinueGpxService(currentRouteDateKey);
-            frgTrackingStats.setTrackingBool(true); 
+			frgTrackingStats.setTrackingBool(true);
 		}
 	}
 
 	private Marker journalMarker;
 	private vwJournal currentJournal;
- 
 
 	// @SuppressWarnings("unchecked")
 	// @Override
@@ -955,7 +926,6 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 	// journalsManagerFrag = new FrgJournalsManagerFrag();
 	// setFragment(journalsManagerFrag);
 	// }
- 
 
 	OnClickListener saveButtonClickListener = new OnClickListener() {
 
@@ -1006,20 +976,21 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 	}
 
 	private void setCurrentFragMap(Bundle args) {
-		if (mapFrag == null)
+		if (mapFrag == null) {
 			mapFrag = new GpshareMapFragment();
-		mapFrag.setArguments(args);
+			mapFrag.setArguments(args);
+		}
 		Globals.setCurrentFrag(mapFrag);
 	}
 
 	private void setCurrentFragTracking() {
-		if (frgTrackingStats == null)
-			frgTrackingStats = new FrgTrackingStats(); 
-		Bundle args = new Bundle();
-		args.putBoolean("trackingOnBool", trackingOnBool);
-		args.putBoolean("isPebbleTracking", isPebbleTracking());
-		frgTrackingStats.setArguments(args);
-		
+		if (frgTrackingStats == null) {
+			frgTrackingStats = new FrgTrackingStats();
+			Bundle args = new Bundle();
+			args.putBoolean("trackingOnBool", trackingOnBool);
+			args.putBoolean("isPebbleTracking", isPebbleTracking());
+			frgTrackingStats.setArguments(args);
+		}
 		Globals.setCurrentFrag(frgTrackingStats);
 	}
 
@@ -1175,7 +1146,7 @@ public class MainActivity extends BaseActivity implements SoapInterface, IDevTec
 
 	public void toggleTracking() {
 		if (trackingOnBool) {
-			stopTracking(); 
+			stopTracking();
 		} else {
 			startTracking();
 		}

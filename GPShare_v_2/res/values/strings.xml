@@ -15,6 +15,8 @@
         <item>Map</item>
     </string-array>
 
+    <string name="real_time_tracking_off">Real Time Tracking Off</string>
+    <string name="real_time_tracking_on">Real Time Tracking On</string>
     <string name="journals_loading">Loading Journals...</string>
     <string name="actvitity">Activity</string>
     <string name="journal">Journal</string>
@@ -28,10 +30,10 @@
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="allPhotos">All Photos</string>
     <string name="FLASH_MODE_AUTO">FLASH_MODE_AUTO</string>
+    <string name="elapsed_time_start">00:00:00</string>
     <string name="FLASH_MODE_ON">FLASH_MODE_ON</string>
     <string name="FLASH_MODE_OFF">FLASH_MODE_OFF</string>
     <string name="hello">Hello World, RouteTrackingActivity!</string>
-    <string name="app_name">GPShare</string>
     <string name="screenText">Main</string>
     <string name="cameraText">Camera Screen</string>
     <string name="camera">Camera</string>
@@ -97,9 +99,7 @@
     <string name="place_manager">Place Manager -- Use Place manager to select, add, update and delete places. </string>
     <string name="places">Places</string>
     <string name="trip_manager">Trip Manager -- Use Trip manager to select, add, update and delete trips. </string>
-    <string name="trips">Trips</string>
     <string name="journal_manager">Journal Manager -- Use Journal manager to select, add, update and delete Journals. </string>
-    <string name="journals">Journals</string>
     <string name="reset">Reset</string>
     <string name="get_fields">Get Fields</string>
     <string name="fields">Fields</string>
@@ -146,7 +146,6 @@
     <string name="topSpeed">Top Speed: </string>
     <string name="distance">Distance</string>
     <string name="elapsedTime">Elapsed Time: </string>
-    <string name="track">Track</string>
     <string name="rise">Rise: </string>
     <string name="fall">Fall: </string>
     <string name="averageSpeed">Average Speed: </string>
@@ -154,7 +153,6 @@
     <string name="map">Map</string>
     <string name="cam">Cam</string>
     <string name="currentPlace">Current Place: </string>
-    <string name="places">Places</string>
     <string name="track">Track</string>
     <string name="tags">Tags</string>
     <string name="routes">Routes</string>

@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="lib" path="C:/android/sdk/add-ons/addon-google_apis-google-19/libs/maps.jar">
@@ -60,5 +60,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/workspace/GPShareLibs/libs/ksoap2-android-assembly-2.5.7-jar-with-dependencies.jar"/>
+	<classpathentry kind="src" path="/GPShareLibs"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Darth/Downloads/SlidingMenu-master/SlidingMenu-master/library/bin/slidingmenulibrary.jar" sourcepath="/SlidingMenulibrary/src"/>
+	<classpathentry kind="src" path="/PEBBLE_KIT"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

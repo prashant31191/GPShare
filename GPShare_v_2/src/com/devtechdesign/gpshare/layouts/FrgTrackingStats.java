@@ -41,21 +41,14 @@ import com.getpebble.android.kit.PebbleKit;
 @SuppressLint("ValidFragment")
 public class FrgTrackingStats extends Fragment {
 
-	LinearLayout statsLayout;
-	private static TextView txtLatitude;
+	LinearLayout statsLayout; 
 	private static TextView txtSpeed;
-	private static TextView txtDistance;
-	private static TextView txtLongitude;
-	private static TextView txtTopSpeed;
-	private static TextView mycurrentLocationText;
-	private ScrollView lytScrollView;
-	private static TextView txtAccuracyDisplay;
-	private static TextView txtCoordCount;
-	private static TextView txtElapsedTimeDisplay;
-	private TableLayout tblMainTableLayout;
+	private static TextView txtDistance; 
+	private static TextView txtTopSpeed; 
+	private static TextView txtAccuracyDisplay; 
+	private static TextView txtElapsedTimeDisplay; 
 	private TextView tvDistanceUom;
-	private TextView tvSpeedUom;
-	private MainActivity mainAct;
+	private TextView tvSpeedUom; 
 	private ITrackingActions mCallback;
 	private boolean trackingBool, isPebbleTracking;
 	private static TextView tvPebbleConnection;
@@ -64,6 +57,7 @@ public class FrgTrackingStats extends Fragment {
 	public static ToggleButton toggleTracking;
 	public static TextView txtStartTracking;
 	public static LinearLayout lytHolder;
+	ViewGroup statsView = null;
 
 	public static void registerReceiver() {
 
@@ -81,24 +75,17 @@ public class FrgTrackingStats extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		ViewGroup statsView = (ViewGroup) inflater.inflate(R.layout.layout_stats, container, false);
 
-		try {
+		if (statsView == null) {
+			statsView = (ViewGroup) inflater.inflate(R.layout.layout_stats, container, false);
+
 			lytHolder = (LinearLayout) statsView.findViewById(R.id.lytHolder);
-			tvPebbleConnection = (TextView) statsView.findViewById(R.id.tvPebbleConnection);
-			txtLatitude = (TextView) statsView.findViewById(R.id.txtLatitudeDisplay);
-			txtLongitude = (TextView) statsView.findViewById(R.id.txtLongitudeDisplay);
+			tvPebbleConnection = (TextView) statsView.findViewById(R.id.tvPebbleConnection); 
 			txtSpeed = (TextView) statsView.findViewById(R.id.txtSpeedDisplay);
-			txtTopSpeed = (TextView) statsView.findViewById(R.id.txtTopSpeedDisplay);
-			mycurrentLocationText = (TextView) statsView.findViewById(R.id.myCurrentLocationTextDisplay);
-			mycurrentLocationText.setTextColor(Color.WHITE);
-			mycurrentLocationText.setTextSize(16);
-			lytScrollView = (ScrollView) statsView.findViewById(R.id.scrollView1);
-			txtAccuracyDisplay = (TextView) statsView.findViewById(R.id.txtAccuracyDisplay);
-			txtCoordCount = (TextView) statsView.findViewById(R.id.txtCoordCountDisplay);
+			txtTopSpeed = (TextView) statsView.findViewById(R.id.txtTopSpeedDisplay); 
+			txtAccuracyDisplay = (TextView) statsView.findViewById(R.id.txtAccuracyDisplay); 
 			txtDistance = (TextView) statsView.findViewById(R.id.txtDistanceDisplay);
-			txtElapsedTimeDisplay = (TextView) statsView.findViewById(R.id.txtElapsedTimeDisplay);
-			tblMainTableLayout = (TableLayout) statsView.findViewById(R.id.tblMainTableLayout);
+			txtElapsedTimeDisplay = (TextView) statsView.findViewById(R.id.txtElapsedTimeDisplay); 
 			toggleTracking = (ToggleButton) statsView.findViewById(R.id.toggleTracking);
 			toggleTracking.setOnClickListener(new OnClickListener() {
 
@@ -120,13 +107,12 @@ public class FrgTrackingStats extends Fragment {
 			// tvGPSRealTimeTrackingService = (TextView)
 			// statsView.findViewById(R.id.tvGPSRealTimeTrackingService);
 			// tvGPSRealTimeTrackingService.setVisibility(View.GONE);
-			setTrackingBool(); 
-			setUomText();
-			startStopBtnVisibility();
 
-		} catch (NullPointerException e) {
-			e.printStackTrace();
+			
 		}
+		setTrackingBool();
+		setUomText();
+		startStopBtnVisibility();
 		return statsView;
 	}
 
@@ -145,6 +131,7 @@ public class FrgTrackingStats extends Fragment {
 
 	@Override
 	public void onResume() {
+
 		super.onResume();
 	}
 
@@ -188,10 +175,7 @@ public class FrgTrackingStats extends Fragment {
 
 	private static void updateGpsUI(Intent intent) {
 
-		Bundle bund = intent.getExtras();
-		String pointCount = bund.getString("pointCount");
-		String lat = bund.getString("latitude");
-		String longi = bund.getString("longitude");
+		Bundle bund = intent.getExtras();  
 		String distance = bund.getString("distance");
 		String speed = bund.getString("speed");
 		String elapsedTime = bund.getString("elapsedTime");
@@ -199,14 +183,11 @@ public class FrgTrackingStats extends Fragment {
 		String accuracy = bund.getString("accuracy");
 
 		txtSpeed.setText(speed);
-		txtDistance.setText(distance);
-		txtCoordCount.setText(pointCount);
-		txtLongitude.setText(longi);
-		txtLatitude.setText(lat);
+		txtDistance.setText(distance); 
 		txtElapsedTimeDisplay.setText(elapsedTime);
 		txtTopSpeed.setText(topSpeed);
 		txtAccuracyDisplay.setText(accuracy);
-		mycurrentLocationText.setText(GPContextHolder.getMainAct().getGprefs().LoadPreferences("currentPlace"));
+
 	}
 
 	@Override
@@ -215,7 +196,8 @@ public class FrgTrackingStats extends Fragment {
 
 		// This makes sure that the container activity has implemented
 		// the callback interface. If not, it throws an exception
-		try {
+		try { 
+
 			mCallback = (ITrackingActions) activity;
 		} catch (ClassCastException e) {
 			throw new ClassCastException(activity.toString() + " must implement OnHeadlineSelectedListener");
@@ -236,6 +218,6 @@ public class FrgTrackingStats extends Fragment {
 
 	public void setPebbleTracking(boolean isPebbleTracking) {
 		this.isPebbleTracking = isPebbleTracking;
-	} 
- 
+	}
+
 }

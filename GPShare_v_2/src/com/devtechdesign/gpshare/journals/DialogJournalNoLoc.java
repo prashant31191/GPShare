@@ -22,7 +22,6 @@ public class DialogJournalNoLoc {
 	private GoogleMap mMap;
 	private Marker journalMarker;
 	private vwJournal currentJournal;
-
 	private aJournals journal;
 
 	public DialogJournalNoLoc(GpshareMapFragment gpshareMapFragment) {
